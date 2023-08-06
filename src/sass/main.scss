@@ -1,0 +1,21 @@
+@use "./components/reset";
+@use "./components/root";
+@use "./components/colors" as *;
+
+body {
+  background-color: #fff;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+}
+
+// Color utility classes
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{$shade} {
+      color: $value;
+    }
+    .bg-#{$color}-#{$shade} {
+      background-color: $value;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+import { styled } from "styled-components";
+import { Paragraph } from "../../../components/Paragraph.styled";
+
+const Wrapper = styled.section`
+  padding: 3rem var(--padding-x) 3.5rem;
+`;
+const Content = styled.div`
+  p + p {
+    margin-top: 1.25rem;
+  }
+`;
+const Heading1 = styled.h1`
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  font-size: var(--fs-600);
+  line-height: 0.9;
+  margin-bottom: 3rem;
+`;
+const Heading2 = styled.h2`
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  font-size: var(--fs-500);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+`;
+
+export function Description() {
+  return (
+    <Wrapper className="bg-neutral-300">
+      <Heading1 className="text-neutral-100">Our Location</Heading1>
+      <Content className="text-neutral-100">
+        <Heading2 className="text-primary-400">99 King Street</Heading2>
+        <Paragraph>
+          Newport <br /> RI 02840 <br /> United States of America
+        </Paragraph>
+        <Paragraph>
+          Our newly opened gallery is located near the Edward King House on 99
+          King Street, the Modern Art Gallery is free to all visitors and open
+          seven days a week from 8am to 9pm.
+        </Paragraph>
+      </Content>
+    </Wrapper>
+  );
+}

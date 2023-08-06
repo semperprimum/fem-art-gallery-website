@@ -1,5 +1,5 @@
-import { Home } from "../pages/Home/Home";
-import { Location } from "../pages/Location/Location";
+import { Home } from "../pages/home/Home";
+import { Location } from "../pages/location/Location";
 
 export const routes = [
   {

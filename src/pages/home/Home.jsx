@@ -1,7 +1,7 @@
 import { Footer } from "../../components/Footer.styled.jsx";
-import { Grid } from "./components/grid.styled.jsx";
-import { Hero } from "./components/hero.styled.jsx";
-import { Introduction } from "./components/introduction.styled.jsx";
+import { Grid } from "./components/Grid.styled.jsx";
+import { Hero } from "./components/Hero.styled.jsx";
+import { Introduction } from "./components/Introduction.styled.jsx";
 export function Home() {
   return (
     <>

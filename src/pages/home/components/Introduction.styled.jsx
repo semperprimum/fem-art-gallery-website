@@ -5,10 +5,21 @@ import { styled } from "styled-components";
 import { Button } from "../../../components/Button.styled";
 import { Paragraph } from "../../../components/Paragraph.styled";
 
+const Wrapper = styled.section`
+  margin-top: 2rem;
+  @media only screen and (min-width: 37.5em) {
+    width: 55%;
+    margin-left: auto;
+    margin-top: 9.06rem;
+  }
+`;
 const IntroductionContent = styled.div`
   margin-inline: var(--padding-x);
   & p {
     margin-bottom: 2rem;
+  }
+  @media only screen and (min-width: 37.5em) {
+    grid-column: 2 / 3;
   }
 `;
 const PrimaryHeading = styled.h1`
@@ -18,14 +29,21 @@ const PrimaryHeading = styled.h1`
   line-height: 0.91667;
   font-weight: var(--fw-bold);
   margin-inline: var(--padding-x);
-  margin-top: 2rem;
   margin-bottom: 2rem;
 `;
-const Picture = styled.picture``;
+const Picture = styled.picture`
+  @media only screen and (min-width: 37.5em) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 27.3125rem;
+    z-index: -50;
+  }
+`;
 
 export function Introduction() {
   return (
-    <section>
+    <Wrapper>
       <Picture>
         <source media="(min-width: 37.5em)" srcSet={heroMd} />
         <source media="(min-width: 60em)" srcSet={heroLg} />
@@ -44,6 +62,6 @@ export function Introduction() {
           Our Location
         </Button>
       </IntroductionContent>
-    </section>
+    </Wrapper>
   );
 }

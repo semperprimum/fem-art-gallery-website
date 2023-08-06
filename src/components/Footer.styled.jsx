@@ -5,11 +5,23 @@ import { ReactComponent as LogoLight } from "../assets/logo-light.svg";
 import { ReactComponent as LogoDark } from "../assets/logo-dark.svg";
 
 const FooterWrapper = styled.footer`
-  padding: 3rem 2rem;
+  padding: 3rem var(--padding-x);
+
+  @media only screen and (min-width: 37.5rem) {
+    padding: 3.5rem var(--padding-x);
+  }
 `;
 const Content = styled.div`
   p {
     padding-block: 2.38rem;
+  }
+  @media only screen and (min-width: 37.5rem) {
+    display: flex;
+    justify-content: space-between;
+    p {
+      width: 46%;
+      padding-block: 0;
+    }
   }
 `;
 

@@ -7,6 +7,9 @@ import "leaflet/dist/leaflet.css";
 const StyledMapContainer = styled(MapContainer)`
   height: 34.375rem;
   max-width: 100vw;
+  @media only screen and (min-width: 37.5rem) {
+    height: 37.5rem;
+  }
 `;
 
 export function Map() {

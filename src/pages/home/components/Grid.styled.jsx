@@ -14,16 +14,38 @@ const GridWrapper = styled.section`
   margin-bottom: 7.5rem;
   display: grid;
   gap: 1rem;
+
+  @media only screen and (min-width: 37.5em) {
+    grid-template-columns: 52.5520833% 47.4479167%;
+    grid-template-rows: 19.5625rem 24.75rem;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .picture-1 {
+      grid-row: 1 / 3;
+    }
+  }
 `;
 const Cta = styled.div`
   padding: 3rem 1.5rem;
   display: grid;
   gap: 1.5rem;
+
+  @media only screen and (min-width: 37.5em) {
+    grid-column: 2 / 3;
+    display: block;
+    padding: 5.31rem 1.75rem;
+    p {
+      margin-top: 1.5rem;
+    }
+  }
 `;
 export function Grid() {
   return (
     <GridWrapper>
-      <picture>
+      <picture className="picture-1">
         <source media="(min-width: 37.5em)" srcSet={item1Md} />
         <source media="(min-width: 60em)" srcSet={item1Lg} />
         <img src={item1Sm} alt="" />

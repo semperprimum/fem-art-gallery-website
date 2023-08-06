@@ -3,6 +3,12 @@ import { Paragraph } from "../../../components/Paragraph.styled";
 
 const Wrapper = styled.section`
   padding: 3rem var(--padding-x) 3.5rem;
+
+  @media only screen and (min-width: 37.5rem) {
+    padding: 5.5rem var(--padding-x) 5rem;
+    display: grid;
+    grid-template-columns: 42% 58%;
+  }
 `;
 const Content = styled.div`
   p + p {
@@ -16,6 +22,9 @@ const Heading1 = styled.h1`
   font-size: var(--fs-600);
   line-height: 0.9;
   margin-bottom: 3rem;
+  @media only screen and (min-width: 37.5rem) {
+    max-width: 40%;
+  }
 `;
 const Heading2 = styled.h2`
   font-family: var(--ff-accent);

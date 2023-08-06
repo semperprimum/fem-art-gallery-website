@@ -2,18 +2,26 @@ import { Button } from "../../components/Button.styled";
 import { Footer } from "../../components/Footer.styled";
 import { Description } from "./components/Description.styled";
 import { Map } from "./components/Map.styled";
+import styled from "styled-components";
+
+const BackButton = styled(Button)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  @media only screen and (min-width: 37.5rem) {
+    left: var(--padding-x);
+  }
+`;
 
 export function Location() {
   return (
     <>
       <main>
-        <Button
-          to="/"
-          $backwards
-          style={{ position: "absolute", top: 0, left: 0, zIndex: 999 }}
-        >
+        <BackButton to="/" $backwards>
           Back To Home
-        </Button>
+        </BackButton>
         <Map />
         <Description />
       </main>

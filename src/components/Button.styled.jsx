@@ -32,5 +32,17 @@ export const Button = styled(Link)`
       props.$backwards ? `url(${ArrowLeft})` : `url(${ArrowRight})`};
     background-repeat: no-repeat;
     background-position: center;
+    transition: background-color 170ms ease;
+  }
+
+  @media only screen and (min-width: 60em) {
+    transition: background-color 170ms ease;
+    &:hover,
+    &:focus-visible {
+      background-color: var(--clr-primary-400);
+      &::after {
+        background-color: var(--clr-neutral-300);
+      }
+    }
   }
 `;

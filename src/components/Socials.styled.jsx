@@ -9,8 +9,15 @@ const SocialsList = styled.ul`
   display: flex;
   gap: 1.25rem;
   svg {
-    fill: /* var(--clr-neutral-100) */ ${(props) =>
+    fill: ${(props) =>
       props.$inverted ? "var(--clr-neutral-300)" : "var(--clr-neutral-100)"};
+    transition: fill 170ms ease;
+  }
+  a:hover {
+    & > svg {
+      fill: ${(props) =>
+        props.$inverted ? "var(--clr-neutral-100)" : "var(--clr-primary-400)"};
+    }
   }
 `;
 

@@ -19,7 +19,7 @@ export function Map() {
       zoomControl={false}
       center={position}
       zoom={15}
-      scrollWheelZoom={false}
+      scrollWheelZoom={true}
     >
       <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" />
       <Marker

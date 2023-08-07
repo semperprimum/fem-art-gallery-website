@@ -60,7 +60,7 @@ export function Footer({ inverted }) {
           <Socials $inverted={inverted} />
         </Content>
       </FooterWrapper>
-      <Attribution />
+      <Attribution $inverted={inverted} />
     </>
   );
 }

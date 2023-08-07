@@ -1,11 +1,26 @@
 @use "./components/reset";
 @use "./components/root";
 @use "./components/colors" as *;
+@use "./components/media-query" as *;
 
 body {
   background-color: #fff;
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
+
+  @include mq(desktop) {
+    // padding-inline: 1rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 49.9375rem;
+      z-index: -9999;
+      background-color: var(--clr-neutral-300);
+    }
+  }
 }
 
 // Color utility classes

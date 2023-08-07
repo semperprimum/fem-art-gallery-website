@@ -4,22 +4,37 @@ import heroLg from "../../../assets/desktop/image-hero@2x.jpg";
 import { styled } from "styled-components";
 import { Button } from "../../../components/Button.styled";
 import { Paragraph } from "../../../components/Paragraph.styled";
+import { Container } from "../../../components/Container.styled";
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   margin-top: 2rem;
   @media only screen and (min-width: 37.5em) {
     width: 55%;
     margin-left: auto;
     margin-top: 9.06rem;
   }
+  @media only screen and (min-width: 60rem) {
+    display: flex;
+    margin-left: revert;
+    justify-content: space-between;
+    width: revert;
+    margin-top: 0;
+  }
 `;
 const IntroductionContent = styled.div`
   margin-inline: var(--padding-x);
   & p {
     margin-bottom: 2rem;
+
+    @media only screen and (min-width: 60em) {
+      margin-bottom: 4rem;
+    }
   }
   @media only screen and (min-width: 37.5em) {
     grid-column: 2 / 3;
+  }
+  @media only screen and (min-width: 60em) {
+    max-width: 21.875rem;
   }
 `;
 const PrimaryHeading = styled.h1`
@@ -30,6 +45,12 @@ const PrimaryHeading = styled.h1`
   font-weight: var(--fw-bold);
   margin-inline: var(--padding-x);
   margin-bottom: 2rem;
+  @media only screen and (min-width: 60em) {
+    color: var(--clr-neutral-100);
+    mix-blend-mode: difference;
+    max-width: 32.125rem;
+    line-height: 0.91667;
+  }
 `;
 const Picture = styled.picture`
   @media only screen and (min-width: 37.5em) {
@@ -37,7 +58,18 @@ const Picture = styled.picture`
     left: 0;
     top: 0;
     max-width: 27.3125rem;
-    z-index: -50;
+    z-index: -20;
+  }
+  @media only screen and (min-width: 60em) {
+    max-width: revert;
+    width: 33.75rem;
+    left: 17.75rem;
+    z-index: -999;
+    img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 49.9375rem;
+    }
   }
 `;
 
@@ -50,7 +82,7 @@ export function Introduction() {
         <img src={heroSm} alt="" />
       </Picture>
       <PrimaryHeading className="text-neutral-300">
-        Modern Art Gallery
+        Modern <br /> Art Gallery
       </PrimaryHeading>
       <IntroductionContent>
         <Paragraph className="text-neutral-200">

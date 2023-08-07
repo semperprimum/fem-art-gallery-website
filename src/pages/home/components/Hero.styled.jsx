@@ -18,6 +18,9 @@ const HeroWrapper = styled.section`
     margin-top: 1.56rem;
     margin-bottom: 1.31rem;
   }
+  @media only screen and (min-width: 60em) {
+    margin-top: 30.88rem;
+  }
 `;
 const Content = styled.div`
   @media only screen and (min-width: 37.5em) {
@@ -34,6 +37,7 @@ export function Hero() {
         <source media="(min-width: 60em)" srcSet={heroLg} />
         <img src={heroSm} alt="" />
       </picture>
+      {/* <img src={heroLg} alt="" /> */}
       <Content>
         <Heading2 className="text-neutral-300">
           Your Day at the Gallery

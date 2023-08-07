@@ -3,6 +3,7 @@ import { Paragraph } from "./Paragraph.styled";
 import { Socials } from "./Socials.styled";
 import { ReactComponent as LogoLight } from "../assets/logo-light.svg";
 import { ReactComponent as LogoDark } from "../assets/logo-dark.svg";
+import { Attribution } from "./Attribution.styled";
 
 const FooterWrapper = styled.footer`
   padding: 3rem var(--padding-x);
@@ -12,7 +13,7 @@ const FooterWrapper = styled.footer`
   }
 
   @media only screen and (min-width: 60em) {
-    padding: 5rem 0;
+    padding: 5rem 0 2.270625rem;
   }
 `;
 const Content = styled.div`
@@ -46,17 +47,20 @@ const Content = styled.div`
 
 export function Footer({ inverted }) {
   return (
-    <FooterWrapper className={inverted ? "bg-primary-400" : "bg-neutral-300"}>
-      <Content>
-        {inverted ? <LogoDark /> : <LogoLight />}
-        <Paragraph
-          className={inverted ? "text-neutral-300" : "text-neutral-100"}
-        >
-          The Modern Art Gallery is free to all visitors and open seven days a
-          week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
-        </Paragraph>
-        <Socials $inverted={inverted} />
-      </Content>
-    </FooterWrapper>
+    <>
+      <FooterWrapper className={inverted ? "bg-primary-400" : "bg-neutral-300"}>
+        <Content>
+          {inverted ? <LogoDark /> : <LogoLight />}
+          <Paragraph
+            className={inverted ? "text-neutral-300" : "text-neutral-100"}
+          >
+            The Modern Art Gallery is free to all visitors and open seven days a
+            week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+          </Paragraph>
+          <Socials $inverted={inverted} />
+        </Content>
+      </FooterWrapper>
+      <Attribution />
+    </>
   );
 }

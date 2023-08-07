@@ -10,10 +10,15 @@ const FooterWrapper = styled.footer`
   @media only screen and (min-width: 37.5rem) {
     padding: 3.5rem var(--padding-x);
   }
+
+  @media only screen and (min-width: 60em) {
+    padding: 5rem 0;
+  }
 `;
 const Content = styled.div`
   p {
     padding-block: 2.38rem;
+    font-size: var(--fs-300);
   }
   @media only screen and (min-width: 37.5rem) {
     display: flex;
@@ -21,6 +26,20 @@ const Content = styled.div`
     p {
       width: 46%;
       padding-block: 0;
+    }
+  }
+  @media only screen and (min-width: 60em) {
+    max-width: 69.375rem;
+    margin-inline: auto;
+    & > svg {
+      height: 3.625rem;
+      width: 9.97325rem;
+    }
+    p {
+      width: 39%;
+      transform: translateX(-4.25rem);
+      line-height: 1.55556;
+      letter-spacing: 0.1px;
     }
   }
 `;

@@ -7,7 +7,7 @@ import { Paragraph } from "../../../components/Paragraph.styled";
 import { Container } from "../../../components/Container.styled";
 
 const Wrapper = styled.div`
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   @media only screen and (min-width: 37.5em) {
     width: 55%;
     margin-left: auto;
@@ -44,12 +44,14 @@ const PrimaryHeading = styled.h1`
   line-height: 0.91667;
   font-weight: var(--fw-bold);
   margin-inline: var(--padding-x);
+  margin-top: 2rem;
   margin-bottom: 2rem;
   @media only screen and (min-width: 60em) {
     color: var(--clr-neutral-100);
     mix-blend-mode: difference;
     max-width: 32.125rem;
     line-height: 0.91667;
+    margin-top: 0;
   }
 `;
 const Picture = styled.picture`
@@ -77,8 +79,8 @@ export function Introduction() {
   return (
     <Wrapper>
       <Picture>
-        <source media="(min-width: 37.5em)" srcSet={heroMd} />
         <source media="(min-width: 60em)" srcSet={heroLg} />
+        <source media="(min-width: 37.5em)" srcSet={heroMd} />
         <img src={heroSm} alt="" />
       </Picture>
       <PrimaryHeading className="text-neutral-300">

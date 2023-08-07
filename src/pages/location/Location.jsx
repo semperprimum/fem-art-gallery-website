@@ -1,4 +1,5 @@
 import { Button } from "../../components/Button.styled";
+import { Container } from "../../components/Container.styled";
 import { Footer } from "../../components/Footer.styled";
 import { Description } from "./components/Description.styled";
 import { Map } from "./components/Map.styled";
@@ -19,9 +20,11 @@ export function Location() {
   return (
     <>
       <main>
-        <BackButton to="/" $backwards>
-          Back To Home
-        </BackButton>
+        <Container>
+          <BackButton to="/" $backwards>
+            Back To Home
+          </BackButton>
+        </Container>
         <Map />
         <Description />
       </main>

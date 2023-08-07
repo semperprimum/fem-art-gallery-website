@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 const Margins = styled.div`
-  margin-inline: 1rem;
+  @media only screen and (min-width: 60em) {
+    margin-inline: 1rem;
+  }
 `;
 const Wrapper = styled.div`
   @media only screen and (min-width: 60em) {

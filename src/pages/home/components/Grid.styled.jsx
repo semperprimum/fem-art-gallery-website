@@ -27,6 +27,13 @@ const GridWrapper = styled.section`
       grid-row: 1 / 3;
     }
   }
+  @media only screen and (min-width: 60em) {
+    grid-template-columns: 57.1% auto;
+    grid-template-rows: 19.5625rem 23.5625rem;
+    gap: 1.88rem;
+    margin-top: 1.88rem;
+    margin-bottom: 11.25rem;
+  }
 `;
 const Cta = styled.div`
   padding: 3rem 1.5rem;
@@ -41,18 +48,27 @@ const Cta = styled.div`
       margin-top: 1.5rem;
     }
   }
+  @media only screen and (min-width: 60em) {
+    padding: 4rem 3rem;
+    h2 {
+      margin-bottom: 2rem;
+    }
+    & > * {
+      max-width: 90%;
+    }
+  }
 `;
 export function Grid() {
   return (
     <GridWrapper>
       <picture className="picture-1">
-        <source media="(min-width: 37.5em)" srcSet={item1Md} />
         <source media="(min-width: 60em)" srcSet={item1Lg} />
+        <source media="(min-width: 37.5em)" srcSet={item1Md} />
         <img src={item1Sm} alt="" />
       </picture>
       <picture>
-        <source media="(min-width: 37.5em)" srcSet={item2Md} />
         <source media="(min-width: 60em)" srcSet={item2Lg} />
+        <source media="(min-width: 37.5em)" srcSet={item2Md} />
         <img src={item2Sm} alt="" />
       </picture>
       <Cta className="bg-neutral-300">

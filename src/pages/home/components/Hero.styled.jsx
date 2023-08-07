@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 import { Paragraph } from "../../../components/Paragraph.styled";
-import heroSm from "../../../assets/mobile/image-grid-1@2x.jpg";
-import heroMd from "../../../assets/tablet/image-grid-1@2x.jpg";
-import heroLg from "../../../assets/desktop/image-grid-1@2x.jpg";
+import imgLg from "../../../assets/desktop/image-grid-1@2x.jpg";
+import imgMd from "../../../assets/tablet/image-grid-1@2x.jpg";
+import imgSm from "../../../assets/mobile/image-grid-1@2x.jpg";
 import { Heading2 } from "../../../components/Heading2.styled";
 
 const HeroWrapper = styled.section`
@@ -12,7 +12,7 @@ const HeroWrapper = styled.section`
     margin-top: 16.56rem;
     display: grid;
     gap: 3.2rem;
-    grid-template-columns: auto 25.875rem;
+    grid-template-columns: auto 51.8%;
   }
   h2 {
     margin-top: 1.56rem;
@@ -20,6 +20,11 @@ const HeroWrapper = styled.section`
   }
   @media only screen and (min-width: 60em) {
     margin-top: 30.88rem;
+    grid-template-columns: auto 39.6875rem;
+    h2 {
+      margin-top: 3.75rem;
+      margin-bottom: 2rem;
+    }
   }
 `;
 const Content = styled.div`
@@ -27,17 +32,20 @@ const Content = styled.div`
     grid-column: 1;
     grid-row: 1;
   }
+  @media only screen and (min-width: 60em) {
+    max-width: 21.875rem;
+  }
 `;
 
 export function Hero() {
   return (
     <HeroWrapper>
       <picture>
-        <source media="(min-width: 37.5em)" srcSet={heroMd} />
-        <source media="(min-width: 60em)" srcSet={heroLg} />
-        <img src={heroSm} alt="" />
+        <source media="(min-width: 60em)" srcSet={imgLg} />
+        <source media="(min-width: 37.5em)" srcSet={imgMd} />
+        <img src={imgSm} alt="" />
       </picture>
-      {/* <img src={heroLg} alt="" /> */}
+      {/* <img src={imgLg} alt="" /> */}
       <Content>
         <Heading2 className="text-neutral-300">
           Your Day at the Gallery
